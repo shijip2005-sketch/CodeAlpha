@@ -1,305 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>VISTA | Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixelia - Gallery</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- LOADING SCREEN -->
-
-    <div class="loader" id="loader">
-
-        <div class="loader-ring"></div>
-
-        <h3>VISTA</h3>
-
-        <p>
-            Preparing gallery...
-        </p>
-
-    </div>
-
-
-    <!-- GLOW -->
-
-    <div class="glow glow-one"></div>
-
-    <div class="glow glow-two"></div>
-
-
     <!-- NAVBAR -->
-
     <header class="navbar">
-
-        <div class="logo">
-            VISTA<span>.</span>
-        </div>
+        <div class="logo">PIXELIA.</div>
 
         <nav>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="gallery.html" class="active">
-                Gallery
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
         </nav>
 
-        <button
-            id="themeBtn"
-            class="theme-btn"
-        >
-            ☀
-        </button>
-
+        <button id="themeToggle">🌙</button>
     </header>
 
 
     <!-- GALLERY HEADER -->
+    <section class="gallery-header">
+        <p>EXPLORE COLLECTION</p>
 
-    <section class="gallery-page">
+        <h1>Beautiful Moments.</h1>
 
-        <div class="gallery-heading">
+        <div class="gallery-tools">
 
-            <div>
+            <!-- FILTER BUTTONS -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
 
-                <span class="eyebrow">
-                    COLLECTION
-                </span>
+                <button class="filter-btn" data-filter="nature">
+                    Nature
+                </button>
 
-                <h1>
-                    Visual <span>Stories.</span>
-                </h1>
+                <button class="filter-btn" data-filter="travel">
+                    Travel
+                </button>
 
-                <p>
-                    Every page reveals a different collection.
-                </p>
+                <button class="filter-btn" data-filter="food">
+                    Food
+                </button>
 
+                <button class="filter-btn" data-filter="city">
+                    City
+                </button>
             </div>
 
+            <!-- SEARCH -->
+            
 
-            <div class="search-box">
+        </div>
+    </section>
 
-                <span>⌕</span>
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search images..."
-                >
+    <!-- IMAGE GALLERY -->
+    <section class="gallery-grid" id="galleryGrid">
 
+        <!-- NATURE 1 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Mountain Nature">
+
+            <img
+                src="https://picsum.photos/id/1018/800/600"
+                alt="Mountain Nature"
+            >
+
+            <div class="card-overlay">
+                <h3>Mountain Nature</h3>
+                <button class="view-btn">♡</button>
             </div>
 
         </div>
 
 
-        <!-- FILTER -->
+        <!-- NATURE 2 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Forest View">
 
-        <div class="filters">
-
-            <button
-                class="filter-btn active"
-                data-filter="all"
+            <img
+                src="https://picsum.photos/id/1044/800/600"
+                alt="Forest View"
             >
-                All
-            </button>
 
-            <button
-                class="filter-btn"
-                data-filter="nature"
-            >
-                Nature
-            </button>
-
-            <button
-                class="filter-btn"
-                data-filter="travel"
-            >
-                Travel
-            </button>
-
-            <button
-                class="filter-btn"
-                data-filter="city"
-            >
-                City
-            </button>
-
-            <button
-                class="filter-btn"
-                data-filter="wildlife"
-            >
-                Wildlife
-            </button>
-
-        </div>
-
-
-        <!-- GALLERY -->
-
-        <div
-            class="gallery-grid"
-            id="galleryGrid"
-        ></div>
-
-
-        <!-- NO RESULT -->
-
-        <div
-            class="no-result"
-            id="noResult"
-        >
-
-            <div>⌕</div>
-
-            <h3>
-                No images found
-            </h3>
-
-            <p>
-                Try another category or search word.
-            </p>
-
-        </div>
-
-
-        <!-- PAGINATION -->
-
-        <div class="pagination">
-
-            <button
-                id="prevPage"
-                class="page-btn"
-            >
-                ← Previous
-            </button>
-
-
-            <div class="page-number">
-
-                <span id="currentPage">
-                    1
-                </span>
-
-                <small>
-                    /
-                </small>
-
-                <span id="totalPages">
-                    3
-                </span>
-
+            <div class="card-overlay">
+                <h3>Forest View</h3>
+                <button class="view-btn">♡</button>
             </div>
 
+        </div>
 
-            <button
-                id="nextPage"
-                class="page-btn primary-page-btn"
+
+        <!-- NATURE 3 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Green Landscape">
+
+            <img
+                src="https://picsum.photos/id/1015/800/600"
+                alt="Green Landscape"
             >
-                Next Page →
-            </button>
+
+            <div class="card-overlay">
+                <h3>Green Landscape</h3>
+                <button class="view-btn">♡</button>
+            </div>
 
         </div>
 
 
-        <div class="page-info">
+        <!-- NATURE 4 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Natural View">
 
-            <span id="pageInfo">
-                PAGE 01
-            </span>
+            <img
+                src="https://picsum.photos/id/1039/800/600"
+                alt="Natural View"
+            >
 
-            <p>
-                More stories waiting for you...
-            </p>
+            <div class="card-overlay">
+                <h3>Natural View</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- NATURE 5 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Beautiful Landscape">
+
+            <img
+                src="https://picsum.photos/id/1020/800/600"
+                alt="Beautiful Landscape"
+            >
+
+            <div class="card-overlay">
+                <h3>Beautiful Landscape</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- NATURE 6 -->
+        <div class="gallery-card"
+             data-category="nature"
+             data-title="Nature Scene">
+
+            <img
+                src="https://picsum.photos/id/1016/800/600"
+                alt="Nature Scene"
+            >
+
+            <div class="card-overlay">
+                <h3>Nature Scene</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 1 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Pizza">
+
+            <img
+                src="https://loremflickr.com/800/600/pizza"
+                alt="Pizza"
+            >
+
+            <div class="card-overlay">
+                <h3>Pizza</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 2 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Burger">
+
+            <img
+                src="https://loremflickr.com/800/600/burger"
+                alt="Burger"
+            >
+
+            <div class="card-overlay">
+                <h3>Burger</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 3 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Biryani">
+
+            <img
+                src="https://loremflickr.com/800/600/biryani"
+                alt="Biryani"
+            >
+
+            <div class="card-overlay">
+                <h3>Biryani</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 4 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Pasta">
+
+            <img
+                src="https://loremflickr.com/800/600/pasta"
+                alt="Pasta"
+            >
+
+            <div class="card-overlay">
+                <h3>Pasta</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 5 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Cake">
+
+            <img
+                src="https://loremflickr.com/800/600/cake"
+                alt="Cake"
+            >
+
+            <div class="card-overlay">
+                <h3>Cake</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 6 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Ice Cream">
+
+            <img
+                src="https://loremflickr.com/800/600/icecream"
+                alt="Ice Cream"
+            >
+
+            <div class="card-overlay">
+                <h3>Ice Cream</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 7 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Dessert">
+
+            <img
+                src="https://loremflickr.com/800/600/dessert"
+                alt="Dessert"
+            >
+
+            <div class="card-overlay">
+                <h3>Dessert</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 8 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Sushi">
+
+            <img
+                src="https://loremflickr.com/800/600/sushi"
+                alt="Sushi"
+            >
+
+            <div class="card-overlay">
+                <h3>Sushi</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 9 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Coffee">
+
+            <img
+                src="https://loremflickr.com/800/600/coffee"
+                alt="Coffee"
+            >
+
+            <div class="card-overlay">
+                <h3>Coffee</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- FOOD 10 -->
+        <div class="gallery-card"
+             data-category="food"
+             data-title="Indian Food">
+
+            <img
+                src="https://loremflickr.com/800/600/indianfood"
+                alt="Indian Food"
+            >
+
+            <div class="card-overlay">
+                <h3>Indian Food</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 1 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Travel Destination">
+
+            <img
+                src="https://picsum.photos/id/1036/800/600"
+                alt="Travel Destination"
+            >
+
+            <div class="card-overlay">
+                <h3>Travel Destination</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 2 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Adventure">
+
+            <img
+                src="https://picsum.photos/id/1056/800/600"
+                alt="Adventure"
+            >
+
+            <div class="card-overlay">
+                <h3>Adventure</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 3 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Travel View">
+
+            <img
+                src="https://picsum.photos/id/1031/800/600"
+                alt="Travel View"
+            >
+
+            <div class="card-overlay">
+                <h3>Travel View</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 4 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Beautiful Place">
+
+            <img
+                src="https://picsum.photos/id/1074/800/600"
+                alt="Beautiful Place"
+            >
+
+            <div class="card-overlay">
+                <h3>Beautiful Place</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 5 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Vacation">
+
+            <img
+                src="https://picsum.photos/id/1050/800/600"
+                alt="Vacation"
+            >
+
+            <div class="card-overlay">
+                <h3>Vacation</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL 6 -->
+        <div class="gallery-card"
+             data-category="travel"
+             data-title="Journey">
+
+            <img
+                src="https://picsum.photos/id/1069/800/600"
+                alt="Journey"
+            >
+
+            <div class="card-overlay">
+                <h3>Journey</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 1 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="City Lights">
+
+            <img
+                src="https://picsum.photos/id/1011/800/600"
+                alt="City Lights"
+            >
+
+            <div class="card-overlay">
+                <h3>City Lights</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 2 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="Urban View">
+
+            <img
+                src="https://picsum.photos/id/1012/800/600"
+                alt="Urban View"
+            >
+
+            <div class="card-overlay">
+                <h3>Urban View</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 3 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="Modern City">
+
+            <img
+                src="https://picsum.photos/id/1033/800/600"
+                alt="Modern City"
+            >
+
+            <div class="card-overlay">
+                <h3>Modern City</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 4 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="Street View">
+
+            <img
+                src="https://picsum.photos/id/1048/800/600"
+                alt="Street View"
+            >
+
+            <div class="card-overlay">
+                <h3>Street View</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 5 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="Architecture">
+
+            <img
+                src="https://picsum.photos/id/1065/800/600"
+                alt="Architecture"
+            >
+
+            <div class="card-overlay">
+                <h3>Architecture</h3>
+                <button class="view-btn">♡</button>
+            </div>
+
+        </div>
+
+
+        <!-- CITY 6 -->
+        <div class="gallery-card"
+             data-category="city"
+             data-title="City Architecture">
+
+            <img
+                src="https://picsum.photos/id/1082/800/600"
+                alt="City Architecture"
+            >
+
+            <div class="card-overlay">
+                <h3>City Architecture</h3>
+                <button class="view-btn">♡</button>
+            </div>
 
         </div>
 
     </section>
 
 
+    <!-- NO RESULTS -->
+    <p id="noResults" class="no-results">
+        No images found 😔
+    </p>
+
+
     <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
 
-    <div
-        class="lightbox"
-        id="lightbox"
-    >
-
-        <button
-            class="close-btn"
-            id="closeBtn"
-        >
-            ×
+        <button class="close-btn" id="closeBtn">
+            ✕
         </button>
 
-
-        <button
-            class="light-arrow left"
-            id="prevPhoto"
-        >
-            ‹
+        <button class="prev-btn" id="prevBtn">
+            ❮
         </button>
 
+        <img id="lightboxImage" src="" alt="Preview">
 
-        <div class="lightbox-content">
-
-            <img
-                id="lightboxImage"
-                src=""
-                alt=""
-            >
-
-            <div class="lightbox-info">
-
-                <div>
-
-                    <small id="lightboxCategory">
-                        NATURE
-                    </small>
-
-                    <h2 id="lightboxTitle">
-                        Image
-                    </h2>
-
-                </div>
-
-
-                <div
-                    class="light-counter"
-                    id="lightCounter"
-                >
-                    01 / 10
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <button
-            class="light-arrow right"
-            id="nextPhoto"
-        >
-            ›
+        <button class="next-btn" id="nextBtn">
+            ❯
         </button>
 
     </div>
 
 
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Pixelia. Every picture tells a story.</p>
+    </footer>
+
+
     <script src="script.js"></script>
+    <!-- PAGINATION -->
+<section class="pagination-section">
+
+    <div class="pagination">
+
+        <button id="prevPage" class="page-btn">
+            ← Previous
+        </button>
+
+        <span id="pageNumber">1 / 5</span>
+
+        <button id="nextPage" class="page-btn">
+            Next Page →
+        </button>
+
+    </div>
+
+    <div class="page-info">
+        <span id="pageLabel">PAGE 01</span>
+        <p>More stories waiting for you</p>
+    </div>
+
+</section>
 
 </body>
 </html>
