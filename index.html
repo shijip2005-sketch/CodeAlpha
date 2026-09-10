@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pixelia - Home</title>
+    <title>VISTA | Creative Gallery</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- PAGE LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-ring"></div>
+        <h3>VISTA</h3>
+        <p>Loading visual experience...</p>
+    </div>
+
+
+    <!-- GLOWING BACKGROUND -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
     <!-- NAVBAR -->
     <header class="navbar">
 
         <div class="logo">
-            PIXELIA.
+            VISTA<span>.</span>
         </div>
 
         <nav>
@@ -23,76 +36,160 @@
             <a href="gallery.html">Gallery</a>
         </nav>
 
-        <button id="themeToggle">🌙</button>
+        <button id="themeBtn" class="theme-btn">
+            ☀
+        </button>
 
     </header>
 
 
-    <!-- HOME HERO -->
-    <section class="hero">
+    <!-- HERO -->
+    <main>
 
-        <div class="hero-content">
+        <section class="hero">
 
-            <p class="small-title">
-                WELCOME TO PIXELIA
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    ✦ CREATIVE VISUAL GALLERY
+                </span>
+
+                <h1>
+                    Capture.
+                    <br>
+                    <span>Feel.</span>
+                    <br>
+                    Remember.
+                </h1>
+
+                <p>
+                    Explore a collection of unique visual moments
+                    presented through a modern interactive gallery
+                    experience.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="gallery.html"
+                        class="btn primary"
+                    >
+                        Explore Gallery →
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="btn secondary"
+                    >
+                        About Project
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO IMAGE STACK -->
+
+            <div class="hero-visual">
+
+                <div class="image-frame frame-back">
+                    <img
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=90"
+                        alt="Landscape"
+                    >
+                </div>
+
+                <div class="image-frame frame-main">
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=90"
+                        alt="Ocean"
+                    >
+                </div>
+
+                <div class="floating-card">
+                    <span>01</span>
+                    <strong>VISUAL</strong>
+                    <small>STORY</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK FEATURES -->
+
+        <section class="features">
+
+            <div class="feature-box">
+                <span>01</span>
+                <h3>Unique Images</h3>
+                <p>Every gallery image is different.</p>
+            </div>
+
+            <div class="feature-box">
+                <span>02</span>
+                <h3>Interactive UI</h3>
+                <p>Modern animations and smooth navigation.</p>
+            </div>
+
+            <div class="feature-box">
+                <span>03</span>
+                <h3>Responsive</h3>
+                <p>Designed for desktop, tablet and mobile.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about" id="about">
+
+            <div>
+
+                <span class="eyebrow">
+                    ABOUT TASK 1
+                </span>
+
+                <h2>
+                    A gallery that
+                    <span>feels alive.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                This Image Gallery is created using HTML, CSS and
+                JavaScript. It includes category filters, pagination,
+                image lightbox, keyboard navigation, loading animation,
+                hover effects and responsive UI/UX.
             </p>
 
-            <h1>
-                Every picture<br>
-                has a <span>story.</span>
-            </h1>
+        </section>
 
-            <p class="hero-text">
-                A collection of beautiful moments, places,
-                flavors and memories captured in one place.
-            </p>
-
-            <a href="gallery.html" class="explore-btn">
-                Explore Gallery →
-            </a>
-
-        </div>
-
-
-        <div class="hero-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-                alt="Nature">
-
-        </div>
-
-    </section>
-
-
-    <!-- STATS -->
-    <section class="stats">
-
-        <div>
-            <h2>28+</h2>
-            <p>Moments</p>
-        </div>
-
-        <div>
-            <h2>04</h2>
-            <p>Collections</p>
-        </div>
-
-        <div>
-            <h2>∞</h2>
-            <p>Stories</p>
-        </div>
-
-    </section>
-
-
-    <!-- COLLECTION PREVIEW -->
-    
+    </main>
 
 
     <!-- FOOTER -->
+
     <footer>
-        <p>© 2026 Pixelia. Every picture tells a story.</p>
+
+        <div class="footer-logo">
+            VISTA<span>.</span>
+        </div>
+
+        <p>
+            Creative Image Gallery · Frontend Development Task
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            HTML · CSS · JavaScript
+        </small>
+
     </footer>
 
 
